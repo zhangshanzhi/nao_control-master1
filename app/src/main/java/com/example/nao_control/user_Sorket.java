@@ -25,8 +25,8 @@ public class user_Sorket extends AsyncTask<String, Void, String> {
     private String message;
     private JSONArray J_array = new JSONArray();
     private JSONObject Json = new JSONObject();
-    String send_j = null;
-    String send_j_a = null;
+    String send_j = "";
+    String send_j_a = "";
     @Override
     protected String doInBackground(String... params){
         try{
@@ -34,12 +34,12 @@ public class user_Sorket extends AsyncTask<String, Void, String> {
 
             if (send_j_a.equals("send_j_a")){
                 send_j_a();
-                send_j_a = null;
+                send_j_a = "";
 
             }else if(send_j.equals("send_j")){
                 send_j();
 
-                send_j = null;
+                send_j = "";
             }
             else{
                 client = new Socket(IP_add, port_num);
